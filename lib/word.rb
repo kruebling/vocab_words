@@ -1,10 +1,10 @@
 class Word
   @@list = []
   attr_reader :id
-  attr_accessor :word, :definition,
+  attr_accessor :vocab, :definition,
 
-  def initialize(word, definition)
-    @word = word
+  def initialize(vocab, definition)
+    @vocab = vocab
     @definition = definition
     @id = @@list.length + 1
   end
@@ -28,7 +28,7 @@ class Word
 
   def save()
     if @@list.all? do |word|
-      self.word != ""
+      self.vocab != ""
       end
       @@list.push(self)
     end
@@ -38,13 +38,13 @@ class Word
     word_id = id.to_i()
     @@list.map do |word_del|
       if word_del.id == word_id
-        word_del.word = ""
+        word_del.vocab = ""
       end
     end
   end
 
   def self.sort()
-    @@list.sort_by! {|x| x.word}
+    @@list.sort_by! {|x| x.vocab}
   end
 
 end
