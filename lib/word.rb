@@ -17,16 +17,20 @@ class Word
     @@list = []
   end
 
-  def save()
-    @@list.push(self)
-  end
-
   def self.find(id)
     word_id = id.to_i()
     @@list.each do |word|
       if word.id == word_id
         return word
       end
+    end
+  end
+
+  def save()
+    if @@list.all? do |word|
+      self.vocab != ""
+      end
+      @@list.push(self)
     end
   end
 
