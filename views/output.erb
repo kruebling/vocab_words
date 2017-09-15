@@ -1,0 +1,8 @@
+<h1>Word: <%= @word.vocab %></h1>
+<h1>Definition: <%= @word.definition %></h1>
+
+
+<form action="/words/<%= @word.id %>" method="post">
+<button type="submit" class="btn btn-warning">Delete Word</button>
+</form><br>
+<button><a href='/'>Back to vocab list!</a></button>

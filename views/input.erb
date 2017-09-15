@@ -1,0 +1,21 @@
+<h2>List of vocab words</h2>
+
+<% @list.each do |word| %>
+  <h4><a href="/words/<%= word.id %>"><%= word.vocab %></a></h4>
+<% end %>
+
+<h4>Add a new Word!</h4><br>
+
+<form action="/" method="post">
+  <div class="form-group">
+
+    <label for="vocab">Enter your word here!</label>
+    <input id="vocab" name="vocab" class="form-control" type="text"><br>
+
+    <label for="definition">Enter your definition here!</label>
+    <input id="definition" name="definition" class="form-control" type="text"><br>
+
+  </div>
+
+  <button type="submit" class="btn btn-info">Submit!</button>
+</form><br><br>
