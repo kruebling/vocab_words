@@ -1,8 +1,18 @@
-<h1>Word: <%= @word.vocab %></h1>
-<h1>Definition: <%= @word.definition %></h1>
-
-
-<form action="/words/<%= @word.id %>" method="post">
-<button type="submit" class="btn btn-warning">Delete Word</button>
-</form><br>
-<button><a href='/'>Back to vocab list!</a></button>
+<div class='jumbotron'>
+  <h1>Vocab Word</h1>
+</div><br>
+<div class='row'>
+  <div class='col-sm-4'>
+    <img src='/img/dictionary.png' alt='Picture of a dictionary.'>
+  </div>
+  <div class='col-sm-8'><br>
+    <h4>Word: <%= @word.vocab %></p></h4><br>
+    <h4>Definition: <%= @word.definition %></h4>
+  </div>
+</div><br>
+<div class='row'>
+  <a href='/'><button class="btn btn-outline-primary">Back to list!</button></a>
+  <form action="/words/<%= @word.id %>" method="post">
+  <button type="submit" class="btn btn-outline-warning">Delete Word</button>
+</form>
+</div>
