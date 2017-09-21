@@ -21,6 +21,15 @@ describe("Word") do
     end
   end
 
+  describe('#add_definition') do
+    it('adds a definition to a word') do
+      word = Word.new("Ruby", "Ruby is a dynamic, reflective, object-oriented, general-purpose programming language")
+      word.save()
+      word.add_definition("Ruby sometimes doesnt work the way I think it will...")
+      expect(word.definitions).to(eq(["Ruby is a dynamic, reflective, object-oriented, general-purpose programming language", "Ruby sometimes doesnt work the way I think it will..."]))
+    end
+  end
+
   describe(".clear") do
     it("clears all items from the list") do
       word = Word.new("Ruby", "Ruby is a dynamic, reflective, object-oriented, general-purpose programming language")

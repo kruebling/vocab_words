@@ -1,11 +1,11 @@
 class Word
   @@list = []
   attr_reader :id
-  attr_accessor :vocab, :definition
+  attr_accessor :vocab, :definitions
 
   def initialize(vocab, definition)
     @vocab = vocab
-    @definition = definition
+    @definitions = [definition]
     @id = @@list.length + 1
   end
 
@@ -32,6 +32,14 @@ class Word
       end
       @@list.push(self)
     end
+  end
+
+  def add_definition(definition)
+    @definitions.push(definition)
+  end
+
+  def self.list
+   @definitions
   end
 
   def self.delete(id)
