@@ -24,6 +24,7 @@ _This app allows the user to store vocab words along with their definition. When
 1. git clone https://github.com/kruebling/vocab_words.git into local directory
 2. ruby app.rb inside directory
 3. localhost://4567 in preferred browser
+4. deploy from heroku link https://dashboard.heroku.com/apps/afternoon-forest-23711
 
 ## Known Bugs
 
