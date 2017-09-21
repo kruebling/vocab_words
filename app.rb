@@ -34,3 +34,14 @@ post('/words/:id') do
   redirect '/'
   erb(:output)
 end
+
+get('/definition') do
+  @word = Word.find(params[:id])
+  erb(:output)
+end
+
+post('/definition') do
+  @word = Word.find(params[:id])
+  @word.add_definition(@definition)
+  erb(:output)
+end
