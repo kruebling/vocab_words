@@ -6,14 +6,14 @@
     <img src='/img/dictionary.png' alt='Picture of a dictionary.'>
   </div>
   <div class='col-sm-8'><br>
-    <h4>Word: <%= @word.vocab %></p></h4><br>
+    <h4>Word: <%= @word.vocab %></h4><br>
     <% @word.definitions.each do |definition| %>
-    <h4>Definition: <%=@word.definitions.index(definition) + 1%>: <%= definition %></h4>
+    <h4>Definition <%=@word.definitions.index(definition) + 1%>: <%= definition %></h4>
   <% end %>
   </div>
 </div><br>
 <div class='row'>
-  <form action="/definition" method="post">
+  <form action="/definition/new" method="post">
     <div class="form-group">
       <label for="definition">Add Another Definition!</label>
       <input id="definition" name="definition" class="form-control" type="text">

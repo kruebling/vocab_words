@@ -35,7 +35,7 @@ class Word
   end
 
   def add_definition(definition)
-    @definitions.push(definition)
+    self.definitions.push(definition)
   end
 
   def self.list

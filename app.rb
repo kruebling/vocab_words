@@ -35,13 +35,16 @@ post('/words/:id') do
   erb(:output)
 end
 
-get('/definition') do
+get('/definition/:id') do
+  word = Word.new(vocab, definition)
   @word = Word.find(params[:id])
   erb(:output)
 end
 
-post('/definition') do
+post('/definition/new') do
   @word = Word.find(params[:id])
-  @word.add_definition(@definition)
+  definition = params["definition"]
+  @word[0].add_definition(definition)
+  redirect '/'
   erb(:output)
 end
